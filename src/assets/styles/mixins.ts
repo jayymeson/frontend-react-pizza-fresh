@@ -1,8 +1,8 @@
 // yarn add @types/styled-components
 import { css } from 'styled-components';
-import { colors } from 'assets/styles/colors';
-import { constants } from 'assets/styles/constants';
-import down from 'assets/icons/down.svg';
+import { colors } from '../styles/colors';
+import { constants } from '../styles/constants';
+import down from '../icons/down.svg';
 
 const logoStyle = () => css`
   font-family: ${constants.logoFontFamily};

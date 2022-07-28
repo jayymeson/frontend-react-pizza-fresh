@@ -1,6 +1,6 @@
-import { colors } from "assets/styles/colors";
-import { constants } from "assets/styles/constants";
-import { mixins } from "assets/styles/mixins";
+import { colors } from "../styles/colors"
+import { constants } from "../styles/constants";
+import { mixins } from "../styles/mixins";
 
 const theme = {
   colors,
