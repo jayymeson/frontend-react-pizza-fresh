@@ -1,8 +1,8 @@
 // yarn add @types/styled-components
-import { css } from 'styled-components';
-import { colors } from '../styles/colors';
-import { constants } from '../styles/constants';
-import down from '../icons/down.svg';
+import { css } from "styled-components";
+import { colors } from "../styles/colors";
+import { constants } from "../styles/constants";
+import { DownIcon } from "../../assets/icons";
 
 const logoStyle = () => css`
   font-family: ${constants.logoFontFamily};
@@ -27,10 +27,10 @@ const overlay = () => css`
 `;
 
 const buttonOutlineModifiers = {
-    square: () => css`
-          width: 48px;
-    `,
-  };
+  square: () => css`
+    width: 48px;
+  `,
+};
 
 const buttonOutline = (color = colors.primaryColor, square = false) => css`
   height: 48px;
@@ -40,7 +40,7 @@ const buttonOutline = (color = colors.primaryColor, square = false) => css`
   cursor: pointer;
   border: 1px solid ${color};
   color: ${color};
-  ${square && buttonOutlineModifiers.square() }
+  ${square && buttonOutlineModifiers.square()}
 `;
 
 const buttonFilled = (color = colors.primaryColor) => css`
@@ -60,7 +60,7 @@ const buttonFilled = (color = colors.primaryColor) => css`
 
 const buttonIconModifiers = {
   active: () => css`
-		box-shadow: 0px 8px 24px 0px ${colors.shadowColor};
+    box-shadow: 0px 8px 24px 0px ${colors.shadowColor};
   `,
 };
 
@@ -102,21 +102,21 @@ const select = (important = true) => css`
   background: ${important ? colors.secondaryColor : "transparent"};
   border: ${important ? "none" : "1px solid " + colors.baseLine};
   color: ${colors.textColor};
-  background-image: url(${down});
+  background-image: url(${DownIcon});
   background-repeat: no-repeat;
   padding-right: 50px;
   background-position: 85%;
 `;
 
 export const mixins = {
-    bodyStyle,
-    buttonFilled,
-    buttonIcon,
-    buttonOutline,
-    buttonToggle,
-    headingStyle,
-    input,
-    logoStyle,
-    overlay,
-    select,
-}
+  bodyStyle,
+  buttonFilled,
+  buttonIcon,
+  buttonOutline,
+  buttonToggle,
+  headingStyle,
+  input,
+  logoStyle,
+  overlay,
+  select,
+};
