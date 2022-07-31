@@ -1,17 +1,27 @@
 import Menu from "../../components/Menu";
 import * as Styled from "./style";
+import { SearchIcon } from "../../assets/icons";
+import { DateTime } from "luxon";
 
 const Home = () => {
+  const actualDate = DateTime.now();
+
+  const formatedDate = `${actualDate.weekdayLong}, ${actualDate.day} ${actualDate.monthLong} ${actualDate.year} `;
+
   return (
     <Styled.HomeContainer>
       <Menu path="home" />
-      <div>
-        <header>
-          <div>
+      <Styled.HomeContentContainer>
+        <Styled.HomeContentHeader>
+          <Styled.TitleContainer>
             <h1>Pizza Fresh</h1>
-            <p>{new Date(Date.now()).toLocaleDateString()}</p>
-          </div>
-        </header>
+            <p>{formatedDate}</p>
+          </Styled.TitleContainer>
+          <Styled.SearchInputContainar>
+            <SearchIcon />
+            <input placeholder="Procure pelo sabor"/>
+          </Styled.SearchInputContainar>
+        </Styled.HomeContentHeader>
         <section>
           <div>
             <p>Pizzas</p>
@@ -30,7 +40,7 @@ const Home = () => {
             <div>Card</div>
           </div>
         </section>
-      </div>
+      </Styled.HomeContentContainer>
       <aside>
         <header>
           <h2>Pedido ##12 </h2>
