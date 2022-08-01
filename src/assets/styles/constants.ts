@@ -1,13 +1,13 @@
 export const constants = {
     logoFontFamily: 'Big Shoulders Inline Display',
-    logoFontSize: '1.75rem',
+    logoFontSize: '28px',
     logoLineHeight: '140%',
 
     headingFontFamily: 'Barlow',
-    headingFontSize: '1.75rem',
+    headingFontSize: '28px',
     headingLineHeight: '140%',
 
     bodyFontFamily: 'Barlow',
-    bodyFontSize: '0.875rem',
+    bodyFontSize: '14px',
     bodyLineHeight: '140%',
 }

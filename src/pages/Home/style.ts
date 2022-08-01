@@ -1,7 +1,12 @@
 import styled, { css } from "styled-components";
+import { Theme } from "../../types/styled-components";
 
 interface CategoriesButtonProps {
   active?: boolean;
+}
+
+interface ButtonProps {
+  theme: Theme
 }
 
 export const HomeContainer = styled.section`
@@ -121,4 +126,11 @@ export const TableSelect = styled.select`
   :focus {
     outline: none;
   }
+`;
+
+export const Button = styled.button<ButtonProps>`
+  width: 15vw;
+  ${({ theme }) => css`
+    background-color: ${theme.colors.primaryColor};
+  `}
 `;
