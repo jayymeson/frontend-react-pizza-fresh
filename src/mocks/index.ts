@@ -1,21 +1,18 @@
-// mudar as imagens e as especificidades dos mocks
-
-
 import * as T from "../types";
 import anchovas from "../assets/imgs/anchovas.png";
 import bacon from "../assets/imgs/bacon.png";
-import calamussa from "../assets/imgs/calamussa.png";
-import camarao from "../assets/imgs/camarao.png";
-import margerita from "../assets/imgs/margerita.png";
-import mussarela from "../assets/imgs/mussarela.png";
-import napolitana from "../assets/imgs/napolitana.png";
-import batataFritaP from "../assets/images/batataFrita.jpg";
-import batataFritaG from "../assets/images/batataFrita.jpg";
-import cocaGarrafa from "../assets/images/cocaColaGarrafa.png";
-import cocaLata from "../assets/images/cocaColaLata.png";
+import calamussa from "../assets/imgs/calamussa.png"
+import camarao from "../assets/imgs/camarao.png"
+import margerita from "../assets/imgs/marguerita.png"
+import mussarela from "../assets/imgs/mussarela.png"
+import napolitana from "../assets/imgs/napolitana.png"
+import batataFritaP from "../assets/imgs/batataFrita.png";
+import batataFritaG from "../assets/imgs/batataFrita.png";
+import cocaGarrafa from "../assets/imgs/cocaColaGarrafa.png";
+import cocaLata from "../assets/imgs/cocaColaLata.png";
 import agua from "../assets/imgs/aguaGarrafa.png"
 
-export const MockedProducts: T.Product[] = [
+export const mockedProducts: T.Product[] = [
   {
     id: "3df26203-5a36-402b-ac7d-437339db15bf",
     name: "Pizza de Anchovas",
@@ -32,7 +29,7 @@ export const MockedProducts: T.Product[] = [
     name: "Pizza de Bacon",
     description:
       "Hamburguer com uma carne bovina de 180g, queijo especial artesanal, salada e molho.",
-    price: 41.90,
+    price: 41.99,
     image: bacon,
     categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
     createdAt: new Date(),
@@ -144,7 +141,7 @@ export const MockedProducts: T.Product[] = [
   },
 ];
 
-export const MockedCategories: T.Category[] = [
+export const mockedCategories: T.Category[] = [
   {
     id: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
     name: "Lanches",
@@ -165,7 +162,7 @@ export const MockedCategories: T.Category[] = [
   },
 ];
 
-export const MockedTables: T.Table[] = [
+export const mockedTables: T.Table[] = [
   {
     id: "922135eb-97dd-47cb-b5d5-7497c753ad57",
     number: 1,
@@ -198,7 +195,7 @@ export const MockedTables: T.Table[] = [
   },
 ];
 
-export const MockedUsers: T.User[] = [
+export const mockedUsers: T.User[] = [
   {
     id: "6d6cf9d2-cf94-4b90-a53b-973d92501e02",
     name: "Jaymeson Mendes",
@@ -209,7 +206,7 @@ export const MockedUsers: T.User[] = [
   },
 ];
 
-export const MockedFavorites: T.Favorite[] = [
+export const mockedFavorites: T.Favorite[] = [
   {
     id: "35abf7f1-c999-4bcf-abfb-a95cb483a2b9",
     productName: "Burguer Salada e Queijo Especial",
@@ -224,7 +221,7 @@ export const MockedFavorites: T.Favorite[] = [
   },
 ];
 
-export const MockedOrders: T.Order[] = [
+export const mockedOrders: T.Order[] = [
   {
     id: "e45555e4-8933-420b-bedb-9814c9a8374d",
     tableNumber: 1,
@@ -233,7 +230,7 @@ export const MockedOrders: T.Order[] = [
   },
 ];
 
-export const MockedOrdersToProducts: T.OrderToProduct[] = [
+export const mockedOrdersToProducts: T.OrderToProduct[] = [
   {
     id: "41889bd0-a2a1-454d-823d-eb5d73d73e59",
     productId: "10c6c5d1-24eb-436d-a21a-0c9b8516f9fa",
