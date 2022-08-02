@@ -2,90 +2,101 @@
 
 
 import * as T from "../types";
-import burguerCarneEFrango from "../assets/images/burguer-carne-e-frango.png";
-import burguerDuploBaconCheddar from "../assets/images/burguer-duplo-bacon-cheddar.png";
-import burguerDuploBacon from "../assets/images/burguer-duplo-bacon.png";
-import burguerDuploRanch from "../assets/images/burguer-duplo-ranch.png";
-import burguerSaladaQueijo from "../assets/images/burguer-salada-queijo.png";
-import burguerSalada from "../assets/images/burguer-salada.png";
-import agua from "../assets/images/agua.png";
-import batataFritaP from "../assets/images/batata-frita-p.png";
-import batataFritaG from "../assets/images/batata-frita-g.png";
-import cocaGarrafa from "../assets/images/coca-garrafa.png";
-import cocaLata from "../assets/images/coca-lata.png";
+import anchovas from "../assets/imgs/anchovas.png";
+import bacon from "../assets/imgs/bacon.png";
+import calamussa from "../assets/imgs/calamussa.png";
+import camarao from "../assets/imgs/camarao.png";
+import margerita from "../assets/imgs/margerita.png";
+import mussarela from "../assets/imgs/mussarela.png";
+import napolitana from "../assets/imgs/napolitana.png";
+import batataFritaP from "../assets/images/batataFrita.jpg";
+import batataFritaG from "../assets/images/batataFrita.jpg";
+import cocaGarrafa from "../assets/images/cocaColaGarrafa.png";
+import cocaLata from "../assets/images/cocaColaLata.png";
+import agua from "../assets/imgs/aguaGarrafa.png"
 
 export const MockedProducts: T.Product[] = [
   {
     id: "3df26203-5a36-402b-ac7d-437339db15bf",
-    name: "Burguer Salada",
+    name: "Pizza de Anchovas",
     description:
-      "Hamburguer com uma carne bovina de 180g, queijo, salada e molho especial.",
-    price: 17.99,
-    image: burguerSalada,
+      "Pizza especial de Anchovas com Mussarela",
+    price: 46.99,
+    image: anchovas,
     categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
     id: "10c6c5d1-24eb-436d-a21a-0c9b8516f9fa",
-    name: "Burguer Salada e Queijo Especial",
+    name: "Pizza de Bacon",
     description:
       "Hamburguer com uma carne bovina de 180g, queijo especial artesanal, salada e molho.",
-    price: 22.99,
-    image: burguerSaladaQueijo,
+    price: 41.90,
+    image: bacon,
     categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
     id: "b201ee19-c00d-4e2a-bdf0-f4101348f1b5",
-    name: "Burguer Carne e Frango",
+    name: "Pizza de Calamussa",
     description:
-      "Hamburguer com duas carnes, um bife bovino de 180g e duas peças de peito de frango empanado com parmesão.",
-    price: 28.99,
-    image: burguerCarneEFrango,
+      "Pizza deliciosa de Calabresa, Cebola e Mussarela",
+    price: 41.99,
+    image: calamussa,
     categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
     id: "ef550853-9fb4-4b97-8e88-843c2f827ee4",
-    name: "Burguer Duplo Ranch",
+    name: "Pizza de Camarão",
     description:
-      "Hamburguer com duas carnes bovinas de 180g e molho especial tipo Ranch.",
-    price: 28.99,
-    image: burguerDuploRanch,
+      "Pizza de Camarão Especial ao molho pesto",
+    price: 71.99,
+    image: camarao,
     categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
     id: "75904227-fdc1-4cc2-a8e1-bf5f6449b2d8",
-    name: "Burguer Salada Duplo Bacon",
+    name: "Pizza de Margerita",
     description:
-      "Hamburguer com duas carnes bovinas de 180g, queijo, salada e bacon.",
+      "Deliciosa pizza de margerita",
     price: 30.99,
-    image: burguerDuploBacon,
+    image: margerita,
     categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
     id: "b1cb2926-59e1-4443-abd7-22ba2e81f9cf",
-    name: "Burguer Duplo Bacon e Cheddar",
+    name: "Pizza de Mussarela",
     description:
-      "Hamburguer com duas carnes bovinas de 180g, bacon e muito queijo cheddar.",
+      "Mussarela com molho de tomate, pitadas de pimenta do reino",
     price: 32.99,
-    image: burguerDuploBaconCheddar,
+    image: mussarela,
     categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
     id: "908816bd-c27d-4813-96a0-5096a0b65725",
-    name: "Batata Frita P",
-    description: "Porção de batata frita com 200g.",
+    name: "Pizza Napolitana",
+    description: "Tradicional sabor original de Napóles",
     price: 12.99,
+    image: napolitana,
+    categoryId: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    id: "731b7290-54c7-4f3c-80bf-fecefd2e08ae",
+    name: "Batata Frita P",
+    description: "Porção de batata frita com 300g.",
+    price: 22.99,
     image: batataFritaP,
     categoryId: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
     createdAt: new Date(),
@@ -190,8 +201,8 @@ export const MockedTables: T.Table[] = [
 export const MockedUsers: T.User[] = [
   {
     id: "6d6cf9d2-cf94-4b90-a53b-973d92501e02",
-    name: "Ivan Borba",
-    email: "ivan@blue.com",
+    name: "Jaymeson Mendes",
+    email: "jaymeson@blue.com",
     password: "7ccbf779f22b9579f80ba3afebcb0e7e",
     createdAt: new Date(),
     updatedAt: new Date(),
