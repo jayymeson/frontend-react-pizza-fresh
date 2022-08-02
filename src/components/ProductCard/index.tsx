@@ -9,7 +9,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <Styled.CardContainer>
       <img alt={product.name} src={product.image} />
-      <h3>{product.name}</h3>
+      <h4>{product.name}</h4>
       <p>{product.price}</p>
       <p>{product.description}</p>
     </Styled.CardContainer>

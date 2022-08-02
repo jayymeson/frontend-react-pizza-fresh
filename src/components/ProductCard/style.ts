@@ -14,5 +14,18 @@ export const CardContainer = styled.div<CardContainerProps>`
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem;
+    padding-top: 3rem;
+    box-sizing: border-box;
+    font-family: ${theme.constants.bodyFontFamily};
+
+    img {
+      width: 8rem;
+      position: absolute;
+      top: -3.3rem;
+    }
   `}
 `;
