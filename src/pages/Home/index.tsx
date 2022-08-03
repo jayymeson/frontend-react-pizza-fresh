@@ -4,10 +4,21 @@ import { SearchIcon } from "../../assets/icons";
 import { DateTime } from "luxon";
 import { mockedProducts } from "../../mocks";
 import ProductsList from "../../components/ProductsList";
+import { mockedCategories } from "../../mocks";
+import { useState } from "react";
+import { Category, Product } from "../../types";
+import OrderDetails from "../../components/OrderDetails";
 
 const Home = () => {
-  const actualDate = DateTime.now();
+  const [selectCategory, setSelectCategory] = useState<Category>(
+    mockedCategories[0]
+  );
 
+  const filteredProducts: Product[] = mockedProducts.filter(
+    (element) => element.categoryId === selectCategory.id
+  );
+
+  const actualDate = DateTime.now();
   const formatedDate = `${actualDate.weekdayLong}, ${actualDate.day} ${actualDate.monthLong} ${actualDate.year} `;
 
   return (
@@ -26,9 +37,16 @@ const Home = () => {
         </Styled.HomeContentHeader>
         <section>
           <Styled.CategoriesBar>
-            <Styled.CategoriesButton active>Pizzas</Styled.CategoriesButton>
-            <Styled.CategoriesButton>Bebidas</Styled.CategoriesButton>
-            <Styled.CategoriesButton>Porções</Styled.CategoriesButton>
+            {mockedCategories.map((element) => {
+              return (
+                <Styled.CategoriesButton
+                  active={element.name === selectCategory.name}
+                  onClick={() => setSelectCategory(element)}
+                >
+                  {element.name}
+                </Styled.CategoriesButton>
+              );
+            })}
           </Styled.CategoriesBar>
           <Styled.ProductsHeader>
             <h2>Escolha seu sabor</h2>
@@ -41,42 +59,10 @@ const Home = () => {
               <option value="3">3</option>
             </Styled.TableSelect>
           </Styled.ProductsHeader>
-          <ProductsList list={mockedProducts}/>
+          <ProductsList list={filteredProducts} />
         </section>
       </Styled.HomeContentContainer>
-      <aside>
-        <header>
-          <h2>Pedido ##12 </h2>
-          <div>
-            <button>Comer no local</button>
-            <button>Viagem</button>
-            <button>Delivery</button>
-          </div>
-        </header>
-        <div>
-          <div>
-            <h3>Item</h3>
-            <h3>Quantidade</h3>
-            <h3>Preço</h3>
-          </div>
-          <div>
-            <div>Card Checkout</div>
-            <div>Card Checkout</div>
-            <div>Card Checkout</div>
-          </div>
-        </div>
-        <div>
-          <div>
-            <p>Desconto</p>
-            <p>R$0,00</p>
-          </div>
-          <div>
-            <p>Sub total</p>
-            <p>R$0,00</p>
-          </div>
-          <button>Continuar para o pagamento</button>
-        </div>
-      </aside>
+      <OrderDetails/>
     </Styled.HomeContainer>
   );
 };
