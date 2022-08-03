@@ -85,7 +85,7 @@ export const mockedProducts: T.Product[] = [
     description: "Tradicional sabor original de Napóles",
     price: 12.99,
     image: napolitana,
-    categoryId: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+    categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
@@ -144,7 +144,7 @@ export const mockedProducts: T.Product[] = [
 export const mockedCategories: T.Category[] = [
   {
     id: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
-    name: "Lanches",
+    name: "Pizza",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
