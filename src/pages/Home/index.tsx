@@ -62,7 +62,7 @@ const Home = () => {
           <ProductsList list={filteredProducts} />
         </section>
       </Styled.HomeContentContainer>
-      <OrderDetails/>
+      <OrderDetails />
     </Styled.HomeContainer>
   );
 };
