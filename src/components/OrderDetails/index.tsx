@@ -1,4 +1,7 @@
+import toast from "react-hot-toast";
+import { mockedProducts } from "../../mocks";
 import Button from "../Button";
+import CheckoutCards from "../CheckoutCard";
 import * as Styled from "./styles";
 
 const OrderDetails = () => {
@@ -7,16 +10,32 @@ const OrderDetails = () => {
       <Styled.OrderDetailsHeader>
         <h2>Pedido 207</h2>
         <div>
-          <Button text="Comer no local" onClick={() => {}} size="small" />
+          <Button
+            text="Comer no local"
+            onClick={() =>
+              toast.error("Sessão em desenvolvimento", {
+                duration: 2000,
+              })
+            }
+            size="small"
+          />
           <Button
             text="P/ Viagem"
-            onClick={() => {}}
+            onClick={() =>
+              toast.error("Sessão em desenvolvimento", {
+                duration: 2000,
+              })
+            }
             size="small"
             variant="disabled"
           />
           <Button
             text="Delivery"
-            onClick={() => {}}
+            onClick={() =>
+              toast.error("Sessão em desenvolvimento", {
+                duration: 2000,
+              })
+            }
             size="small"
             variant="disabled"
           />
@@ -24,15 +43,16 @@ const OrderDetails = () => {
       </Styled.OrderDetailsHeader>
       <Styled.CheckoutDetailsContainer>
         <Styled.CheckoutDetailsHeader>
-          <h3>Item</h3>
-          <h3>Quantidade</h3>
+          <div>
+            <h3>Item</h3>
+            <h3>Qtd</h3>
+          </div>
           <h3>Preço</h3>
         </Styled.CheckoutDetailsHeader>
-        <div>
-          <div>Card Checkout</div>
-          <div>Card Checkout</div>
-          <div>Card Checkout</div>
-        </div>
+        <Styled.CheckoutCardsContainer>
+          <CheckoutCards product={mockedProducts[0]}/>
+          <CheckoutCards product={mockedProducts[1]}/>
+        </Styled.CheckoutCardsContainer>
       </Styled.CheckoutDetailsContainer>
       <Styled.OrderDetailsFooter>
         <div>
@@ -45,7 +65,11 @@ const OrderDetails = () => {
         </div>
         <Button
           text="Continuar para o pagamento"
-          onClick={() => {}}
+          onClick={() =>
+            toast.error("Sessão em desenvolvimento", {
+              duration: 2000,
+            })
+          }
           size={"large"}
         />
       </Styled.OrderDetailsFooter>

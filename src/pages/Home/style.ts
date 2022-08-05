@@ -6,7 +6,7 @@ interface CategoriesButtonProps {
 }
 
 interface ButtonProps {
-  theme: Theme
+  theme: Theme;
 }
 
 export const HomeContainer = styled.section`
