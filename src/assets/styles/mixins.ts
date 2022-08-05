@@ -2,7 +2,7 @@
 import { css } from "styled-components";
 import { colors } from "../styles/colors";
 import { constants } from "../styles/constants";
-import { DownIcon } from "../../assets/icons";
+import { DownIcon } from "../icons";
 
 const logoStyle = () => css`
   font-family: ${constants.logoFontFamily};
@@ -102,7 +102,7 @@ const select = (important = true) => css`
   background: ${important ? colors.secondaryColor : "transparent"};
   border: ${important ? "none" : "1px solid " + colors.baseLine};
   color: ${colors.textColor};
-  background-image: url(${DownIcon});
+
   background-repeat: no-repeat;
   padding-right: 50px;
   background-position: 85%;
