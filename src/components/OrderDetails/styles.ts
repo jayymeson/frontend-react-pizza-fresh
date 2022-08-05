@@ -55,6 +55,11 @@ export const CheckoutDetailsHeader = styled.div`
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid ${theme.colors.baseLine};
+    div {
+      display: flex;
+      justify-content: space-between;
+      width: 18.625rem;
+    }
   `}
 `;
 
@@ -74,3 +79,13 @@ export const OrderDetailsFooter = styled.footer`
     }
   `}
 `;
+
+export const CheckoutCardsContainer = styled.div`
+  ${({ theme }) => css`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  `}
+`;
+
