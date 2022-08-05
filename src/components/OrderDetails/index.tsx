@@ -70,7 +70,7 @@ const OrderDetails = () => {
               duration: 2000,
             })
           }
-          size={"large"}
+          size={"x-large"}
         />
       </Styled.OrderDetailsFooter>
     </Styled.OrderDetailsContainer>
