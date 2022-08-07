@@ -30,7 +30,6 @@ export const MenuItem = styled.div<MenuItemProps>`
   align-items: center;
   justify-content: center;
   border-radius: 12px 0 0 12px;
-  background-color: #1f1d2b;
 
   ${({ logout }) =>
     logout &&
