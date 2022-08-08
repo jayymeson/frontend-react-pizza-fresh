@@ -5,7 +5,7 @@ import { MarketIcon, InfoIcon, PromotionIcon } from "../../assets/icons";
 import Button from "../../components/Button";
 import { mockedProducts } from "../../mocks";
 import toast from "react-hot-toast";
-// import SettingsProductCard from "../../components/SettingsProductCard";
+import SettingsProductCard from "../../components/SettingsProductsCard";
 
 interface SettingsProps {
   setLogged: Dispatch<SetStateAction<boolean>>;
@@ -66,9 +66,9 @@ const Settings = ({ setLogged }: SettingsProps) => {
             <h3>+</h3>
             <p>Adicionar Item</p>
           </Styled.AddEntityCard>
-          {/* {mockedProducts.map((element) => (
+          {mockedProducts.map((element) => (
             <SettingsProductCard product={element} key={element.id} />
-          ))} */}
+          ))}
         </Styled.EntitiesEditList>
         <Styled.ConfirmationContainer>
           <Button
