@@ -1,4 +1,4 @@
-import { Product } from "../../types";
+import { Favorite, Product } from "../../types";
 import ProductCard from "../ProductCard";
 import * as Styled from "./styles";
 

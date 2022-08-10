@@ -2,11 +2,11 @@ import Menu from "../../components/Menu";
 import * as Styled from "./style";
 import { SearchIcon } from "../../assets/icons";
 import { DateTime } from "luxon";
-import { mockedProducts } from "../../mocks";
+import { mockedFavorites, mockedProducts } from "../../mocks";
 import ProductsList from "../../components/ProductsList";
 import { mockedCategories } from "../../mocks";
 import { Dispatch, SetStateAction, useState } from "react";
-import { Category, Product } from "../../types";
+import { Category, Favorite, Product } from "../../types";
 import OrderDetails from "../../components/OrderDetails";
 
 interface HomePros {
@@ -22,12 +22,20 @@ const Home = ({ setLogged }: HomePros) => {
     (element) => element.categoryId === selectCategory.id
   );
 
+  const [selectFavorite, setselectFavorite] = useState<Favorite>(
+    mockedFavorites[0]
+  );
+
+  const filteredFavorite: Favorite[] = mockedFavorites.filter(
+    (element) => element.productName === selectFavorite.id
+  );
+
   const actualDate = DateTime.now();
   const formatedDate = `${actualDate.weekdayLong}, ${actualDate.day} ${actualDate.monthLong} ${actualDate.year} `;
 
   return (
     <Styled.HomeContainer>
-      <Menu path="home" setLogged={setLogged}/>
+      <Menu path="home" setLogged={setLogged} />
       <Styled.HomeContentContainer>
         <Styled.HomeContentHeader>
           <Styled.TitleContainer>
@@ -51,6 +59,16 @@ const Home = ({ setLogged }: HomePros) => {
                 </Styled.CategoriesButton>
               );
             })}
+            {/* {mockedFavorites.map((element) => {
+              return (
+                <Styled.CategoriesButton
+                  active={element.productName === selectFavorite.productName}
+                  onClick={() => setselectFavorite(element)}
+                >
+                  {element.productName}
+                </Styled.CategoriesButton>
+              );
+            })} */}
           </Styled.CategoriesBar>
           <Styled.ProductsHeader>
             <h2>Escolha seu sabor</h2>
