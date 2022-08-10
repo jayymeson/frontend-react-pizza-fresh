@@ -160,6 +160,13 @@ export const mockedCategories: T.Category[] = [
     createdAt: new Date(),
     updatedAt: new Date(),
   },
+  {
+    id: "1c86eac1-f2b9-4bdf-8dc9-21bcd789da43",
+    name: "Favoritos",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+  
 ];
 
 export const mockedTables: T.Table[] = [
@@ -209,13 +216,13 @@ export const mockedUsers: T.User[] = [
 export const mockedFavorites: T.Favorite[] = [
   {
     id: "35abf7f1-c999-4bcf-abfb-a95cb483a2b9",
-    productName: "Burguer Salada e Queijo Especial",
+    productName: "Pizza de Camarão",
     userId: "6d6cf9d2-cf94-4b90-a53b-973d92501e02",
     favoritedAt: new Date(),
   },
   {
     id: "9a5a8f0e-43aa-4d77-8afd-e3a95deddc81",
-    productName: "Burguer Duplo Bacon e Cheddar",
+    productName: "Pizza de Bacon",
     userId: "6d6cf9d2-cf94-4b90-a53b-973d92501e02",
     favoritedAt: new Date(),
   },
