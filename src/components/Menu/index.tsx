@@ -2,20 +2,17 @@ import * as Styled from "./styles";
 import Logo from "../../assets/logo_patterns/logo.png";
 import { HomeIcon, SettingsIcon, LogoutIcon } from "../../assets/icons";
 import { useNavigate } from "react-router-dom";
-import { Dispatch, SetStateAction } from "react";
+import { useAuth } from "../../contexts/auth";
+import toast from "react-hot-toast";
 
 interface MenuProps {
   path: "home" | "settings";
-  setLogged: Dispatch<SetStateAction<boolean>>;
 }
 
-const Menu = ({ path, setLogged }: MenuProps) => {
+const Menu = ({ path }: MenuProps) => {
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    setLogged(false);
-    navigate("/login");
-  };
+  const { logout } = useAuth();
 
   return (
     <Styled.MenuContainer>
@@ -39,7 +36,12 @@ const Menu = ({ path, setLogged }: MenuProps) => {
         </Styled.MenuItem>
       </nav>
       <Styled.MenuItem logout>
-        <Styled.MenuItemButton onClick={handleLogout}>
+        <Styled.MenuItemButton
+          onClick={() => {
+            logout();
+            toast.success("Necessário fazer login novamente");
+          }}
+        >
           <LogoutIcon />
         </Styled.MenuItemButton>
       </Styled.MenuItem>
