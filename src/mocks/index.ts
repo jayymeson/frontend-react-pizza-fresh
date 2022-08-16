@@ -28,7 +28,7 @@ export const mockedProducts: T.Product[] = [
     id: "10c6c5d1-24eb-436d-a21a-0c9b8516f9fa",
     name: "Pizza de Bacon",
     description:
-      "Hamburguer com uma carne bovina de 180g, queijo especial artesanal, salada e molho.",
+      "Pizza especial de Bacon com mussarela.",
     price: 41.99,
     image: bacon,
     categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
