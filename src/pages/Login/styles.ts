@@ -14,7 +14,7 @@ export const LoginPageContainer = styled.div`
   `}
 `;
 
-export const LoginFormContainer = styled.div`
+export const LoginFormContainer = styled.form`
   ${({ theme }) => css`
     width: 21.438rem;
     height: 26.875rem;
