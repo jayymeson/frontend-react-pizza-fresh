@@ -1,4 +1,3 @@
-import Input from "../../components/Input";
 import * as Styled from "./styles";
 import Logo from "../../assets/logo_patterns/logo.png";
 import Button from "../../components/Button";

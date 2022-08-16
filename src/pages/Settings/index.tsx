@@ -1,14 +1,14 @@
-import { Dispatch, SetStateAction } from "react";
 import Menu from "../../components/Menu";
 import * as Styled from "./styles";
 import { MarketIcon, InfoIcon, PromotionIcon } from "../../assets/icons";
 import Button from "../../components/Button";
-import { mockedProducts } from "../../mocks";
 import toast from "react-hot-toast";
 import SettingsProductCard from "../../components/SettingsProductsCard";
-
+import { useProducts } from "../../contexts/products";
 
 const Settings = () => {
+  const { products } = useProducts();
+
   return (
     <Styled.SettingsContainer>
       <Menu path="settings" />
@@ -63,7 +63,7 @@ const Settings = () => {
             <h3>+</h3>
             <p>Adicionar Item</p>
           </Styled.AddEntityCard>
-          {mockedProducts.map((element) => (
+          {products.map((element) => (
             <SettingsProductCard product={element} key={element.id} />
           ))}
         </Styled.EntitiesEditList>
