@@ -3,23 +3,24 @@ import * as Styled from "./style";
 import { SearchIcon } from "../../assets/icons";
 import { DateTime } from "luxon";
 import ProductsList from "../../components/ProductsList";
-import { mockedCategories } from "../../mocks";
-import { Dispatch, SetStateAction, useState } from "react";
-import { Category, Favorite, Product } from "../../types";
+import { useState } from "react";
+import { Category, Product } from "../../types";
 import OrderDetails from "../../components/OrderDetails";
 import { useProducts } from "../../contexts/products";
+import { useCategories } from "../../contexts/categories";
 
 const Home = () => {
+  const { categories } = useCategories();
   const { products } = useProducts();
 
-  console.log(products);
+  console.log(categories);
 
   const [selectCategory, setSelectCategory] = useState<Category>(
-    mockedCategories[0]
+    categories[0] || ({} as Category)
   );
 
   const filteredProducts: Product[] = products.filter(
-    (element) => element.categoryId === selectCategory.id
+    (element) => selectCategory && element.categoryId === selectCategory.id
   );
 
   const actualDate = DateTime.now();
@@ -41,7 +42,7 @@ const Home = () => {
         </Styled.HomeContentHeader>
         <section>
           <Styled.CategoriesBar>
-            {mockedCategories.map((element) => {
+            {categories.map((element) => {
               return (
                 <Styled.CategoriesButton
                   active={element.name === selectCategory.name}

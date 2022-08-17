@@ -135,26 +135,26 @@ export const mockedProducts: T.Product[] = [
   },
 ];
 
-export const mockedCategories: T.Category[] = [
-  {
-    id: "cd93c25d-f8ef-455c-b21e-439c755d6aae",
-    name: "Pizza",
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-  {
-    id: "59d18386-89d6-4484-83a4-f736451bc4b0",
-    name: "Porções",
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-  {
-    id: "8caa0985-7804-4ce8-b822-e5935d1cc5ef",
-    name: "Bebidas",
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-];
+// export const mockedCategories: T.Category[] = [
+//   {
+//     id: "cd93c25d-f8ef-455c-b21e-439c755d6aae",
+//     name: "Pizza",
+//     createdAt: new Date(),
+//     updatedAt: new Date(),
+//   },
+//   {
+//     id: "59d18386-89d6-4484-83a4-f736451bc4b0",
+//     name: "Porções",
+//     createdAt: new Date(),
+//     updatedAt: new Date(),
+//   },
+//   {
+//     id: "8caa0985-7804-4ce8-b822-e5935d1cc5ef",
+//     name: "Bebidas",
+//     createdAt: new Date(),
+//     updatedAt: new Date(),
+//   },
+// ];
 
 export const mockedTables: T.Table[] = [
   {
