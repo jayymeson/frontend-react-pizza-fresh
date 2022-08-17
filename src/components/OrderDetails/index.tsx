@@ -5,6 +5,8 @@ import CheckoutCards from "../CheckoutCard";
 import * as Styled from "./styles";
 
 const OrderDetails = () => {
+
+  // const { products } = useProducts();
   return (
     <Styled.OrderDetailsContainer>
       <Styled.OrderDetailsHeader>
