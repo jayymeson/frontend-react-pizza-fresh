@@ -15,7 +15,7 @@ import toast from "react-hot-toast";
 import { useProducts } from "../../contexts/products";
 import { Product } from "../../types";
 
-interface ProductModalProsp {
+interface ProductModalProps {
   handleOpenModal: () => void;
   product?: Product;
   setProduct: Dispatch<SetStateAction<Product | undefined>>;
@@ -56,7 +56,7 @@ const ProductModal = ({
   handleOpenModal,
   product,
   setProduct,
-}: ProductModalProsp) => {
+}: ProductModalProps) => {
   const { handleGetProducts } = useProducts();
 
   const [categoryId, setCategoryId] = useState<string>(

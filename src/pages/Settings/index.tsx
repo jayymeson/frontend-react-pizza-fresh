@@ -5,9 +5,24 @@ import Button from "../../components/Button";
 import toast from "react-hot-toast";
 import SettingsProductCard from "../../components/SettingsProductsCard";
 import { useProducts } from "../../contexts/products";
+import { useState } from "react";
+import { Product } from "../../types";
+import ProductModal from "../../components/ProductModal";
 
 const Settings = () => {
   const { products } = useProducts();
+
+  const [openModal, setOpenModal] = useState<boolean>(false);
+  const [openDeleteModal, setOpenDeleteModal] = useState<boolean>(false);
+  const [product, setProduct] = useState<Product | undefined>(undefined);
+
+  const handleOpenModal = () => {
+    setOpenModal(!openModal);
+  };
+
+  const handleOpenDeleteModal = () => {
+    setOpenDeleteModal(!openDeleteModal);
+  };
 
   return (
     <Styled.SettingsContainer>
@@ -59,7 +74,7 @@ const Settings = () => {
           </Styled.EntitiesEditCategoriesButton>
         </Styled.EntitiesEditCategoriesSelector>
         <Styled.EntitiesEditList>
-          <Styled.AddEntityCard>
+          <Styled.AddEntityCard onClick={handleOpenModal}>
             <h3>+</h3>
             <p>Adicionar Item</p>
           </Styled.AddEntityCard>
@@ -79,6 +94,12 @@ const Settings = () => {
           />
         </Styled.ConfirmationContainer>
       </Styled.EntitiesEditContainer>
+      {openModal && (
+        <ProductModal
+          setProduct={setProduct}
+          handleOpenModal={handleOpenModal}
+        />
+      )}
     </Styled.SettingsContainer>
   );
 };
