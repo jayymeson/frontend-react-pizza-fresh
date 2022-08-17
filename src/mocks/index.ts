@@ -1,23 +1,22 @@
 import * as T from "../types";
 import anchovas from "../assets/imgs/anchovas.png";
 import bacon from "../assets/imgs/bacon.png";
-import calamussa from "../assets/imgs/calamussa.png"
-import camarao from "../assets/imgs/camarao.png"
-import margerita from "../assets/imgs/marguerita.png"
-import mussarela from "../assets/imgs/mussarela.png"
-import napolitana from "../assets/imgs/napolitana.png"
+import calamussa from "../assets/imgs/calamussa.png";
+import camarao from "../assets/imgs/camarao.png";
+import margerita from "../assets/imgs/marguerita.png";
+import mussarela from "../assets/imgs/mussarela.png";
+import napolitana from "../assets/imgs/napolitana.png";
 import batataFritaP from "../assets/imgs/batataFrita.png";
 import batataFritaG from "../assets/imgs/batataFrita.png";
 import cocaGarrafa from "../assets/imgs/cocaColaGarrafa.png";
 import cocaLata from "../assets/imgs/cocaColaLata.png";
-import agua from "../assets/imgs/aguaGarrafa.png"
+import agua from "../assets/imgs/aguaGarrafa.png";
 
 export const mockedProducts: T.Product[] = [
   {
     id: "3df26203-5a36-402b-ac7d-437339db15bf",
     name: "Pizza de Anchovas",
-    description:
-      "Pizza especial de Anchovas com Mussarela",
+    description: "Pizza especial de Anchovas com Mussarela",
     price: 46.99,
     image: anchovas,
     categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
@@ -27,8 +26,7 @@ export const mockedProducts: T.Product[] = [
   {
     id: "10c6c5d1-24eb-436d-a21a-0c9b8516f9fa",
     name: "Pizza de Bacon",
-    description:
-      "Hamburguer com uma carne bovina de 180g, queijo especial artesanal, salada e molho.",
+    description: "Pizza especial de Bacon com mussarela.",
     price: 41.99,
     image: bacon,
     categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
@@ -38,8 +36,7 @@ export const mockedProducts: T.Product[] = [
   {
     id: "b201ee19-c00d-4e2a-bdf0-f4101348f1b5",
     name: "Pizza de Calamussa",
-    description:
-      "Pizza deliciosa de Calabresa, Cebola e Mussarela",
+    description: "Pizza deliciosa de Calabresa, Cebola e Mussarela",
     price: 41.99,
     image: calamussa,
     categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
@@ -49,8 +46,7 @@ export const mockedProducts: T.Product[] = [
   {
     id: "ef550853-9fb4-4b97-8e88-843c2f827ee4",
     name: "Pizza de Camarão",
-    description:
-      "Pizza de Camarão Especial ao molho pesto",
+    description: "Pizza de Camarão Especial ao molho pesto",
     price: 71.99,
     image: camarao,
     categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
@@ -60,8 +56,7 @@ export const mockedProducts: T.Product[] = [
   {
     id: "75904227-fdc1-4cc2-a8e1-bf5f6449b2d8",
     name: "Pizza de Margerita",
-    description:
-      "Deliciosa pizza de margerita",
+    description: "Deliciosa pizza de margerita",
     price: 30.99,
     image: margerita,
     categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
@@ -71,8 +66,7 @@ export const mockedProducts: T.Product[] = [
   {
     id: "b1cb2926-59e1-4443-abd7-22ba2e81f9cf",
     name: "Pizza de Mussarela",
-    description:
-      "Mussarela com molho de tomate, pitadas de pimenta do reino",
+    description: "Mussarela com molho de tomate, pitadas de pimenta do reino",
     price: 32.99,
     image: mussarela,
     categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
@@ -143,30 +137,23 @@ export const mockedProducts: T.Product[] = [
 
 export const mockedCategories: T.Category[] = [
   {
-    id: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
+    id: "cd93c25d-f8ef-455c-b21e-439c755d6aae",
     name: "Pizza",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
-    id: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+    id: "59d18386-89d6-4484-83a4-f736451bc4b0",
     name: "Porções",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
-    id: "1c86eac1-f2b9-4bdf-8dc9-21bcd789da4f",
+    id: "8caa0985-7804-4ce8-b822-e5935d1cc5ef",
     name: "Bebidas",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-  {
-    id: "1c86eac1-f2b9-4bdf-8dc9-21bcd789da43",
-    name: "Favoritos",
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  }
-  
 ];
 
 export const mockedTables: T.Table[] = [
