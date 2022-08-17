@@ -79,7 +79,12 @@ const Settings = () => {
             <p>Adicionar Item</p>
           </Styled.AddEntityCard>
           {products.map((element) => (
-            <SettingsProductCard product={element} key={element.id} />
+            <SettingsProductCard
+              handleOpenModal={handleOpenModal}
+              setProduct={setProduct}
+              product={element}
+              key={element.id}
+            />
           ))}
         </Styled.EntitiesEditList>
         <Styled.ConfirmationContainer>
@@ -97,6 +102,7 @@ const Settings = () => {
       {openModal && (
         <ProductModal
           setProduct={setProduct}
+          product={product}
           handleOpenModal={handleOpenModal}
         />
       )}
