@@ -8,6 +8,7 @@ import { useProducts } from "../../contexts/products";
 import { useState } from "react";
 import { Product } from "../../types";
 import ProductModal from "../../components/ProductModal";
+import DeleteProductModal from "../../components/DeleteProductModal";
 
 const Settings = () => {
   const { products } = useProducts();
@@ -81,6 +82,7 @@ const Settings = () => {
           {products.map((element) => (
             <SettingsProductCard
               handleOpenModal={handleOpenModal}
+              handleOpenDeleteModal={handleOpenDeleteModal}
               setProduct={setProduct}
               product={element}
               key={element.id}
@@ -104,6 +106,13 @@ const Settings = () => {
           setProduct={setProduct}
           product={product}
           handleOpenModal={handleOpenModal}
+        />
+      )}
+      {openDeleteModal && (
+        <DeleteProductModal
+          setProduct={setProduct}
+          productId={product?.id}
+          handleOpenDeleteModal={handleOpenDeleteModal}
         />
       )}
     </Styled.SettingsContainer>
