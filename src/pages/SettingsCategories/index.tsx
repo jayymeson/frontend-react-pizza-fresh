@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { EditIcon, TrashIcon } from "../../assets/icons";
 import CategoryModal from "../../components/CategoryModal";
+import DeleteCategoryModal from "../../components/DeleteCategoryModal";
 import Menu from "../../components/Menu";
 import SettingsMenu from "../../components/SettingsMenu";
 import { useCategories } from "../../contexts/categories";
@@ -43,10 +44,17 @@ const SettingsCategories = () => {
               <Styled.EntityCard key={element.id}>
                 <p>{element.name}</p>
                 <div>
-                  <Styled.SettingsCategoryDeleteButton>
+                  <Styled.SettingsCategoryDeleteButton
+                    onClick={() => {
+                      setCategory(element);
+                      handleOpenDeleteModal();
+                    }}
+                  >
                     <TrashIcon /> Remover
                   </Styled.SettingsCategoryDeleteButton>
-                  <Styled.SettingsCategoryEditButton>
+                  <Styled.SettingsCategoryEditButton
+                    onClick={() => handleOpenUpdateModal(element)}
+                  >
                     <EditIcon /> Editar
                   </Styled.SettingsCategoryEditButton>
                 </div>
@@ -60,6 +68,13 @@ const SettingsCategories = () => {
           setCategory={setCategory}
           category={category}
           handleOpenModal={handleOpenModal}
+        />
+      )}
+      {openDeleteModal && (
+        <DeleteCategoryModal
+          setCategory={setCategory}
+          categoryId={category?.id}
+          handleOpenDeleteModal={handleOpenDeleteModal}
         />
       )}
     </Styled.SettingsContainer>
