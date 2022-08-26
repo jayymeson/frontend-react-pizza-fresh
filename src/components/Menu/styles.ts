@@ -14,8 +14,11 @@ export const MenuContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 1.25rem;
+  position: fixed;
+
   img {
     width: 4rem;
+    margin: 1.25rem 0;
   }
   nav {
     width: 100%;

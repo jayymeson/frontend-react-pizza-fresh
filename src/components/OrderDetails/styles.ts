@@ -10,7 +10,8 @@ export const OrderDetailsContainer = styled.aside`
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    position: relative;
+    position: fixed;
+    right: 0;
   `}
 `;
 

@@ -9,11 +9,12 @@ import OrderDetails from "../../components/OrderDetails";
 import { useProducts } from "../../contexts/products";
 import { useCategories } from "../../contexts/categories";
 import { api } from "../../services";
-
+import { useTables } from "../../contexts/table";
 
 const Home = () => {
   const { categories } = useCategories();
   const { products } = useProducts();
+  const { tables } = useTables();
 
   const [selectCategory, setSelectCategory] = useState<Category>(
     categories[0] || ({} as Category)
@@ -106,9 +107,9 @@ const Home = () => {
               <option value="" disabled>
                 Selecione a mesa
               </option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
+              {tables.map((elem) => {
+                return <option value={elem.number}>{elem.number}</option>;
+              })}
             </Styled.TableSelect>
           </Styled.ProductsHeader>
           <ProductsList
