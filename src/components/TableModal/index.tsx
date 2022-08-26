@@ -49,7 +49,7 @@ const TableModal = ({ handleOpenModal, table, setTable }: TableModalProps) => {
 
   const handleNewTable = (data: TableData) => {
     api
-      .post("/tables", data, headers)
+      .post("/table", data, headers)
       .then(() => {
         toast.success("Mesa criada com sucesso");
         handleGetTables();

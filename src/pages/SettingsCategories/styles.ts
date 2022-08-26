@@ -12,6 +12,7 @@ export const SettingsContainer = styled.div`
 export const EntitiesEditContainer = styled.div`
   ${({ theme }) => css`
     width: 100%;
+    /* padding-left: 6.5rem; */
     height: calc(100% - 6.25rem);
     margin-top: 4.75rem;
     margin-bottom: 1.5rem;
