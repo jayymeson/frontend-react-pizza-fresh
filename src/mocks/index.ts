@@ -189,28 +189,28 @@ export const mockedTables: T.Table[] = [
   },
 ];
 
-export const mockedUsers: T.User[] = [
-  {
-    id: "6d6cf9d2-cf94-4b90-a53b-973d92501e02",
-    name: "Jaymeson Mendes",
-    email: "jaymeson@blue.com",
-    password: "7ccbf779f22b9579f80ba3afebcb0e7e",
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-];
+// export const mockedUsers: T.User[] = [
+//   {
+//     id: "6d6cf9d2-cf94-4b90-a53b-973d92501e02",
+//     name: "Jaymeson Mendes",
+//     email: "jaymeson@blue.com",
+//     password: "7ccbf779f22b9579f80ba3afebcb0e7e",
+//     createdAt: new Date(),
+//     updatedAt: new Date(),
+//   },
+// ];
 
 export const mockedFavorites: T.Favorite[] = [
   {
     id: "35abf7f1-c999-4bcf-abfb-a95cb483a2b9",
     productName: "Pizza de Camarão",
-    userId: "6d6cf9d2-cf94-4b90-a53b-973d92501e02",
+    userId: "b699b96e-117a-4c98-a1ad-331799e28cbd",
     favoritedAt: new Date(),
   },
   {
     id: "9a5a8f0e-43aa-4d77-8afd-e3a95deddc81",
     productName: "Pizza de Bacon",
-    userId: "6d6cf9d2-cf94-4b90-a53b-973d92501e02",
+    userId: "b699b96e-117a-4c98-a1ad-331799e28cbd",
     favoritedAt: new Date(),
   },
 ];

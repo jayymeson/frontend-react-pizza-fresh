@@ -25,6 +25,7 @@ export interface Table {
 
 export interface User {
   id?: string;
+  favorites: Favorite[];
   name: string;
   email: string;
   password?: string;
