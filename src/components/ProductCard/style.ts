@@ -7,8 +7,8 @@ interface CardContainerProps {
 
 export const CardContainer = styled.div<CardContainerProps>`
   ${({ theme }) => css`
-    width: 12rem;
-    height: 14.125rem;
+    width: 13.5rem;
+    height: 18.5rem;
     border-radius: 16px;
     background-color: ${theme.colors.baseBg2};
     display: flex;
@@ -26,6 +26,10 @@ export const CardContainer = styled.div<CardContainerProps>`
       width: 8rem;
       position: absolute;
       top: -3.3rem;
+    }
+
+    p{
+      margin-bottom: 1rem;
     }
   `}
 `;
