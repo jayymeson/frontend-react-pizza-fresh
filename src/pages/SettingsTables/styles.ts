@@ -12,7 +12,6 @@ export const SettingsContainer = styled.div`
 export const EntitiesEditContainer = styled.div`
   ${({ theme }) => css`
     width: 100%;
-    /* padding-left: 6.5rem; */
     height: calc(100% - 6.25rem);
     margin-top: 4.75rem;
     margin-bottom: 1.5rem;
@@ -31,7 +30,7 @@ export const EntitiesEditContainer = styled.div`
 export const EntitiesEditList = styled.div`
   ${({ theme }) => css`
     width: 100%;
-    height: calc(100% - 16.25rem);
+    max-height: calc(100% - 16.25rem);
     display: flex;
     flex-wrap: wrap;
     padding: 1.5rem;
@@ -78,7 +77,7 @@ export const EntityCard = styled.div`
   `}
 `;
 
-export const SettingsCategoryEditButton = styled.button`
+export const SettingsTableEditButton = styled.button`
   ${({ theme }) => css`
     height: 3.25rem;
     width: 50%;
@@ -94,7 +93,7 @@ export const SettingsCategoryEditButton = styled.button`
   `}
 `;
 
-export const SettingsCategoryDeleteButton = styled.button`
+export const SettingsTableDeleteButton = styled.button`
   ${({ theme }) => css`
     height: 3.25rem;
     width: 50%;
