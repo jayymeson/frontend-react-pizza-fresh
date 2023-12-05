@@ -30,15 +30,20 @@ const loginSchema = yup.object().shape({
 const Login = () => {
   const { login } = useAuth();
 
+  const defaultValues = {
+    email: "jaymeson@teste.com.br",
+    password: "Abc1234*",
+  };
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<LoginData>({ resolver: yupResolver(loginSchema) });
+  } = useForm<LoginData>({ resolver: yupResolver(loginSchema), defaultValues });
 
   const handleLogin = (data: LoginData) => {
     api
-      .post("/auth", data)
+      .post("/auth/mock-login", data)
       .then((res) => {
         login({ token: res.data.token, user: res.data.user });
       })
